@@ -1,0 +1,192 @@
+{
+	"variables": [],
+	"info": {
+		"name": "QuoteAPI",
+		"_postman_id": "df6716e1-5d4f-a8b4-4408-c7d6194ef8a4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Quotes",
+			"description": "",
+			"item": [
+				{
+					"name": "GET List quotes",
+					"request": {
+						"url": "http://127.0.0.1:5000/quotes",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET quote by id",
+					"request": {
+						"url": "http://127.0.0.1:5000/authors/1/quotes/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET all quotes by author id",
+					"request": {
+						"url": "http://127.0.0.1:5000/authors/1/quotes",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create new quote to author",
+					"request": {
+						"url": "http://127.0.0.1:5000/authors/1/quotes",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quote\": \"Язык, который не меняет вашего представления о программировании, недостоин изучения\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Edit quote by id",
+					"request": {
+						"url": "http://127.0.0.1:5000/authors/1/quotes/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quote\": \"Я изобрел понятие «объектно-ориентированный», и могу заявить, что не имел в виду C++\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete quote by id",
+					"request": {
+						"url": "http://127.0.0.1:5000/authors/1/quotes/1",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authors",
+			"description": "",
+			"item": [
+				{
+					"name": "GET author by id",
+					"request": {
+						"url": "http://127.0.0.1:5000/authors/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET author list",
+					"request": {
+						"url": "http://127.0.0.1:5000/authors/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Author Post",
+					"request": {
+						"url": "http://127.0.0.1:5000/authors/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Alan\", \n    \"surname\": \"Perlis\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Author update by id",
+					"request": {
+						"url": "http://127.0.0.1:5000/authors/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Alan\", \n    \"surname\": \"Kay\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete author by id",
+					"request": {
+						"url": "http://127.0.0.1:5000/authors/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Indira\", \n    \"surname\": \"Gandhi\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
