@@ -49,5 +49,7 @@ class AuthorResource(Resource):
         author = AuthorModel.query.get(author_id)
         if author is None:
             return f"Author id={author_id} not found", 404
+        db.session.delete(author)
+        db.session.commit()
 
-        return author_schema.dump(author), 200
+        return f"Author id={author_id} deleted", 200
